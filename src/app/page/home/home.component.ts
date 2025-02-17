@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  output = '';
+  onClickBtn() {
+    let name = document.getElementById("name") as HTMLTextAreaElement;
+    this.output = name.value;
+  }
 
 }
